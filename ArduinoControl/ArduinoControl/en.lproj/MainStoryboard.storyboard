@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController storyboardIdentifier="main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2" customClass="MPViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="aaa.png" translatesAutoresizingMaskIntoConstraints="NO" id="mkm-JD-h6n"/>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nq3-9b-jHO">
+                                <connections>
+                                    <action selector="url1" destination="2" eventType="touchUpInside" id="XkH-kp-XKC"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hQk-PR-lm3">
+                                <connections>
+                                    <action selector="url2" destination="2" eventType="touchUpInside" id="1ND-I6-jqA"/>
+                                </connections>
+                            </switch>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="hae-pr-u07">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="NIv-z7-AoJ"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Arduino Control" id="LYG-qp-CA2">
+                                        <barButtonItem key="rightBarButtonItem" title="Setup" id="ENH-Ga-dZW">
+                                            <connections>
+                                                <action selector="goSettings" destination="2" id="cTU-38-79x"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hae-pr-u07" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="0WN-bi-f1C"/>
+                            <constraint firstItem="mkm-JD-h6n" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="9Y0-lb-apL"/>
+                            <constraint firstItem="hae-pr-u07" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="AyE-Bz-ET7"/>
+                            <constraint firstAttribute="bottom" secondItem="hQk-PR-lm3" secondAttribute="bottom" constant="31" id="CUs-vw-5ER"/>
+                            <constraint firstItem="hae-pr-u07" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="Han-pD-Llt"/>
+                            <constraint firstItem="mkm-JD-h6n" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="J9l-tO-dNt"/>
+                            <constraint firstAttribute="trailing" secondItem="hQk-PR-lm3" secondAttribute="trailing" constant="36" id="Ph2-hE-3B3"/>
+                            <constraint firstItem="nq3-9b-jHO" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="56" id="c4a-Wj-5Bk"/>
+                            <constraint firstItem="mkm-JD-h6n" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="j6f-WT-XGr"/>
+                            <constraint firstItem="hae-pr-u07" firstAttribute="bottom" secondItem="mkm-JD-h6n" secondAttribute="top" type="default" id="lg4-om-Kx2"/>
+                            <constraint firstAttribute="bottom" secondItem="nq3-9b-jHO" secondAttribute="bottom" constant="211" id="r7Q-cG-cSM"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="dVg-ti-GkT">
+            <objects>
+                <viewController storyboardIdentifier="settings" modalTransitionStyle="partialCurl" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pWt-wg-4r2" customClass="MPSettings" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dCf-N0-zsM">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wlc-gU-qpe">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="ebY-2O-dTV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="pWt-wg-4r2" id="t4a-Jm-Ryw"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="URL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEC-g0-sMQ">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3W9-KV-rml">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="LPo-cz-2AX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="pWt-wg-4r2" id="DFy-mq-Igo"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="URL 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R0d-Zw-yGq">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" text="Add the URLs you have set in the sketch to     turn on/off the lights" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5mf-WT-vsM">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="9OK-tu-Mee"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3W9-KV-rml" firstAttribute="top" secondItem="dCf-N0-zsM" secondAttribute="top" constant="206" id="1Tr-sk-fN0"/>
+                            <constraint firstItem="Wlc-gU-qpe" firstAttribute="leading" secondItem="dCf-N0-zsM" secondAttribute="leading" constant="155" id="3ha-4U-9sO"/>
+                            <constraint firstItem="3W9-KV-rml" firstAttribute="leading" secondItem="Wlc-gU-qpe" secondAttribute="leading" type="default" id="45B-X2-70r"/>
+                            <constraint firstItem="UEC-g0-sMQ" firstAttribute="top" secondItem="dCf-N0-zsM" secondAttribute="top" constant="130" id="4YG-Hy-bXd"/>
+                            <constraint firstItem="R0d-Zw-yGq" firstAttribute="leading" secondItem="dCf-N0-zsM" secondAttribute="leading" constant="68" id="5v5-Re-601"/>
+                            <constraint firstItem="R0d-Zw-yGq" firstAttribute="baseline" secondItem="3W9-KV-rml" secondAttribute="baseline" type="default" id="Go8-g5-XnE"/>
+                            <constraint firstItem="3W9-KV-rml" firstAttribute="trailing" secondItem="Wlc-gU-qpe" secondAttribute="trailing" type="default" id="JU5-zh-e7U"/>
+                            <constraint firstItem="R0d-Zw-yGq" firstAttribute="centerX" secondItem="UEC-g0-sMQ" secondAttribute="centerX" type="default" id="SjB-fJ-YAl"/>
+                            <constraint firstItem="Wlc-gU-qpe" firstAttribute="top" secondItem="dCf-N0-zsM" secondAttribute="top" constant="126" id="iGR-z3-J9I"/>
+                            <constraint firstItem="R0d-Zw-yGq" firstAttribute="top" secondItem="dCf-N0-zsM" secondAttribute="top" constant="210" id="men-SI-5F6"/>
+                            <constraint firstItem="5mf-WT-vsM" firstAttribute="trailing" secondItem="dCf-N0-zsM" secondAttribute="trailing" type="default" id="rwh-eN-B8s"/>
+                            <constraint firstItem="5mf-WT-vsM" firstAttribute="leading" secondItem="dCf-N0-zsM" secondAttribute="leading" type="default" id="t3L-oL-Ww8"/>
+                            <constraint firstItem="5mf-WT-vsM" firstAttribute="bottom" secondItem="dCf-N0-zsM" secondAttribute="bottom" type="default" id="uot-o6-N7A"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="url1" destination="Wlc-gU-qpe" id="Pny-VP-0wR"/>
+                        <outlet property="url2" destination="3W9-KV-rml" id="XGt-ZL-xMN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HPt-Gd-AY9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1096" y="268"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="aaa.png" width="640" height="920"/>
+    </resources>
+    <classes>
+        <class className="MPSettings" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MPSettings.h"/>
+            <relationships>
+                <relationship kind="outlet" name="url1" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="url2" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="MPViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MPViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="goSettings"/>
+                <relationship kind="action" name="url1"/>
+                <relationship kind="action" name="url2"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
