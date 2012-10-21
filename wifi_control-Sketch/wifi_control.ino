@@ -1,5 +1,7 @@
 /*
- * A simple sketch that uses WiServer to serve a web page
+ * Created by MPow 
+ * twitter @manzopower
+ * BSD license
  */
 
 
@@ -70,6 +72,7 @@ boolean sendMyPage(char* URL) {
   WiServer.println("<img src=\"");
   WiServer.print("http://www.labattigiasori.it/");
   WiServer.print("arduino/reload.png\">");
+    WiServer.println("<a href=\"/luce\">");
   WiServer.println("<img src=\"");
   WiServer.print("http://www.labattigiasori.it/");
   WiServer.print("arduino/reload.png\">");
