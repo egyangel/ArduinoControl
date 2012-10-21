@@ -9,6 +9,13 @@ but you can also have a Eterneth shield and edit this sketch to make it working 
 
 The Sketch and the XCode Project are under BSD license.
 
+VIDEO:
+
+http://www.youtube.com/watch?v=GQdq5txWpmo&feature=plcp
+http://www.youtube.com/watch?v=xFfgMMahaa8&feature=plcp
+
+
+
 Twitter @manzopower
 Website mpow.altervista.org
 Mail manzopower@icloud.com 
